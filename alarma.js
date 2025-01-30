@@ -1,3 +1,15 @@
+let elementoSonidoAlarma = document.getElementById("sonidoAlarma");
+let elementoSegundos = document.getElementById("tiempoElegido");
+
+function comenzarTiempo() {
+    setTimeout(tiempoCumplido, 1000 * elementoSegundos.value)
+}
+
+function tiempoCumplido() {
+    elementoTextoAlarma.style.color = "red";
+    elementoSonidoAlarma.play();
+}
+
 function comenzarReloj() {
     setInterval(contadorTiempo, 1000);
 }
